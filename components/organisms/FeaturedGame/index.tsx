@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GameItem from '../../../constants/featuredItem';
 import FeaturedItem from '../../molecules/FeaturedItem';
 
-function FeaturedGame() {
+const FeaturedGame = () => {
   const [games] = useState(GameItem);
   return (
     <section className="featured-game pt-50 pb-50">
@@ -22,6 +22,6 @@ function FeaturedGame() {
       </div>
     </section>
   );
-}
+};
 
 export default FeaturedGame;

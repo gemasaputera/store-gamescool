@@ -5,11 +5,11 @@ interface Props {
   isLogin?: boolean;
 }
 
-export default function Auth({ isLogin }: Partial<Props>) {
+const Auth = ({ isLogin }: Partial<Props>) => {
   if (isLogin) {
     return (
       <li className="nav-item my-auto dropdown d-flex">
-        <div className="vertical-line d-lg-block d-none"></div>
+        <div className="vertical-line d-lg-block d-none" />
         <div>
           <a
             className="dropdown-toggle ms-lg-40"
@@ -78,4 +78,5 @@ export default function Auth({ isLogin }: Partial<Props>) {
       </Link>
     </li>
   );
-}
+};
+export default Auth;

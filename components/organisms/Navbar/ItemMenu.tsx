@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 interface Props {
@@ -8,10 +9,8 @@ interface Props {
   active?: boolean;
 }
 
-function ItemMenu({ title, link, active }: Props) {
-  const classTitle = cx('nav-link', {
-    active,
-  });
+const ItemMenu = ({ title, link, active }: Props) => {
+  const classTitle = cx('nav-link', { active });
   return (
     <li className="nav-item my-auto">
       <Link href={link}>
@@ -19,6 +18,18 @@ function ItemMenu({ title, link, active }: Props) {
       </Link>
     </li>
   );
-}
+};
+
+ItemMenu.defaultProps = {
+  title: '',
+  link: '',
+  active: false
+};
+
+ItemMenu.propTypes = {
+  title: PropTypes.string,
+  link: PropTypes.string,
+  active: PropTypes.bool
+};
 
 export default ItemMenu;

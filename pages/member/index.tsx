@@ -464,8 +464,7 @@ const MemberOverview = () => (
                       </g>
                     </svg>
                     <p className="color-palette-1 mb-0 ms-12">
-                      Game
-                      <br /> Desktop
+                      Game <br /> Desktop
                     </p>
                   </div>
                   <div>

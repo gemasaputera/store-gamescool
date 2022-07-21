@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 interface Props {
   title1: string;
@@ -9,7 +10,7 @@ interface Props {
   type: 'desktop' | 'mobile';
 }
 
-function TopUpItem({ title1, title2, category, thumbnail, type }: Props) {
+const TopUpItem = ({ title1, title2, category, thumbnail, type }: Props) => {
   if (type === 'desktop') {
     return (
       <div className="pb-50 d-md-block d-none">
@@ -46,6 +47,22 @@ function TopUpItem({ title1, title2, category, thumbnail, type }: Props) {
       </div>
     </div>
   );
-}
+};
+
+TopUpItem.defaultProps = {
+  title1: '',
+  title2: '',
+  category: '',
+  thumbnail: '',
+  type: 'desktop'
+};
+
+TopUpItem.propTypes = {
+  title1: PropTypes.string,
+  title2: PropTypes.string,
+  category: PropTypes.string,
+  thumbnail: PropTypes.string,
+  type: PropTypes.string
+};
 
 export default TopUpItem;

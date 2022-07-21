@@ -23,13 +23,30 @@
       2,
       {
         "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
+        "unnamedComponents": "function-expression"
       }
     ],
     "react/jsx-props-no-spreading": "off",
     "linebreak-style": 0,
-    "object-curly-newline": ["error", { "minProperties": 5 }],
+    "object-curly-newline": [
+      "error",
+      { "multiline": true, "minProperties": 6 }
+    ],
     "jsx-a11y/anchor-is-valid": 0,
-    "import/extensions": "never"
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "jsx-a11y/no-redundant-roles": 0
   }
 }

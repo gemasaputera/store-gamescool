@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Steps from '../../../constants/steps';
 import StepItem from '../../molecules/StepItem';
 
-function TransactionStep() {
+const TransactionStep = () => {
   const [steps] = useState(Steps);
 
   return (
@@ -20,6 +20,6 @@ function TransactionStep() {
       </div>
     </section>
   );
-}
+};
 
 export default TransactionStep;
