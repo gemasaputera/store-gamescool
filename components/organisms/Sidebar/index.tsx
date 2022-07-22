@@ -47,7 +47,7 @@ const Sidebar = () => {
     },
     {
       title: 'Settings',
-      url: '',
+      url: '/member/edit-profile',
       iconMenu: <CogIcon />,
       active: false
     },

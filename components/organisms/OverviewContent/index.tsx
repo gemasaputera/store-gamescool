@@ -1,5 +1,6 @@
 import React from 'react';
 import Category from './Category';
+import RowTable from './RowTable';
 
 const OverviewContent = () => (
   <main className="main-wrapper">
@@ -40,152 +41,41 @@ const OverviewContent = () => (
               </tr>
             </thead>
             <tbody>
-              <tr className="align-middle">
-                <th scope="row">
-                  <img
-                    className="float-start me-3 mb-lg-0 mb-3"
-                    src="/img/overview-1.png"
-                    width="80"
-                    height="60"
-                    alt=""
-                  />
-                  <div className="game-title-header">
-                    <p className="game-title fw-medium text-start color-palette-1 m-0">
-                      Mobile Legends: The New Battle 2021
-                    </p>
-                    <p className="text-xs fw-normal text-start color-palette-2 m-0">
-                      Desktop
-                    </p>
-                  </div>
-                </th>
-                <td>
-                  <p className="fw-medium color-palette-1 m-0">200 Gold</p>
-                </td>
-                <td>
-                  <p className="fw-medium text-start color-palette-1 m-0">
-                    Rp 290.000
-                  </p>
-                </td>
-                <td>
-                  <div>
-                    <span className="float-start icon-status pending" />
-                    <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                      Pending
-                    </p>
-                  </div>
-                </td>
-              </tr>
-              <tr className="align-middle text-center">
-                <th scope="row">
-                  <img
-                    className="float-start me-3 mb-lg-0 mb-3"
-                    src="/img/overview-2.png"
-                    width="80"
-                    height="60"
-                    alt=""
-                  />
-                  <div className="game-title-header">
-                    <p className="game-title fw-medium text-start color-palette-1 m-0">
-                      Call of Duty:Modern
-                    </p>
-                    <p className="text-xs fw-normal text-start color-palette-2 m-0">
-                      Desktop
-                    </p>
-                  </div>
-                </th>
-                <td>
-                  <p className="fw-medium text-start color-palette-1 m-0">
-                    550 Gold
-                  </p>
-                </td>
-                <td>
-                  <p className="fw-medium text-start color-palette-1 m-0">
-                    Rp 740.000
-                  </p>
-                </td>
-                <td>
-                  <div>
-                    <span className="float-start icon-status success" />
-                    <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                      Success
-                    </p>
-                  </div>
-                </td>
-              </tr>
-              <tr className="align-middle text-center">
-                <th scope="row">
-                  <img
-                    className="float-start me-3 mb-lg-0 mb-3"
-                    src="/img/overview-3.png"
-                    width="80"
-                    height="60"
-                    alt=""
-                  />
-                  <div className="game-title-header">
-                    <p className="game-title fw-medium text-start color-palette-1 m-0">
-                      Clash of Clans
-                    </p>
-                    <p className="text-xs fw-normal text-start color-palette-2 m-0">
-                      Mobile
-                    </p>
-                  </div>
-                </th>
-                <td>
-                  <p className="fw-medium text-start color-palette-1 m-0">
-                    100 Gold
-                  </p>
-                </td>
-                <td>
-                  <p className="fw-medium text-start color-palette-1 m-0">
-                    Rp 120.000
-                  </p>
-                </td>
-                <td>
-                  <div>
-                    <span className="float-start icon-status failed" />
-                    <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                      Failed
-                    </p>
-                  </div>
-                </td>
-              </tr>
-              <tr className="align-middle text-center">
-                <th scope="row">
-                  <img
-                    className="float-start me-3 mb-lg-0 mb-3"
-                    src="/img/overview-4.png"
-                    width="80"
-                    height="60"
-                    alt=""
-                  />
-                  <div className="game-title-header">
-                    <p className="game-title fw-medium text-start color-palette-1 m-0">
-                      The Royal Game
-                    </p>
-                    <p className="text-xs fw-normal text-start color-palette-2 m-0">
-                      Mobile
-                    </p>
-                  </div>
-                </th>
-                <td>
-                  <p className="fw-medium text-start color-palette-1 m-0">
-                    225 Gold
-                  </p>
-                </td>
-                <td>
-                  <p className="fw-medium text-start color-palette-1 m-0">
-                    Rp 200.000
-                  </p>
-                </td>
-                <td>
-                  <div>
-                    <span className="float-start icon-status pending" />
-                    <p className="fw-medium text-start color-palette-1 m-0 position-relative">
-                      Pending
-                    </p>
-                  </div>
-                </td>
-              </tr>
+              <RowTable
+                image="overview-1"
+                item={200}
+                price={200000}
+                status="Pending"
+                category="Desktop"
+                title="Mobile Legends: The New Battle 2021"
+              />
+
+              <RowTable
+                image="overview-2"
+                item={550}
+                price={740000}
+                status="Success"
+                category="Desktop"
+                title="Call of Duty:Modern"
+              />
+
+              <RowTable
+                image="overview-3"
+                item={100}
+                price={120000}
+                status="Failed"
+                category="Mobile"
+                title="Clash of Clans"
+              />
+
+              <RowTable
+                image="overview-4"
+                item={225}
+                price={200000}
+                status="Failed"
+                category="Mobile"
+                title="The Royal Game"
+              />
             </tbody>
           </table>
         </div>
