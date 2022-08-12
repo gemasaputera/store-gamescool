@@ -13,13 +13,23 @@ import Profile from './Profile';
 import Footer from './Footer';
 import MenuItem from './MenuItem';
 
-const Sidebar = () => {
+interface SidebarProps {
+  activeMenu:
+    | 'Overview'
+    | 'Transactions'
+    | 'Messages'
+    | 'Rewards'
+    | 'Card'
+    | 'Settings';
+}
+
+const Sidebar = ({ activeMenu }: SidebarProps) => {
   const [menus] = useState([
     {
       title: 'Overview',
-      url: '',
+      url: '/member',
       iconMenu: <ViewGridIcon />,
-      active: true
+      active: false
     },
     {
       title: 'Transactions',
@@ -65,7 +75,11 @@ const Sidebar = () => {
         <Profile />
         <div className="menus">
           {menus.map((menu) => (
-            <MenuItem {...menu} key={menu.title} />
+            <MenuItem
+              {...menu}
+              active={activeMenu === menu.title}
+              key={menu.title}
+            />
           ))}
         </div>
         <Footer />
