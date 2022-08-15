@@ -2,28 +2,28 @@ const GameItem = [
   {
     title: 'Super Mechs',
     category: 'Mobile',
-    img: 'Thumbnail-1',
+    img: '/img/Thumbnail-1.png'
   },
   {
     title: 'Call of Duty: Modern',
     category: 'Mobile',
-    img: 'Thumbnail-2',
+    img: '/img/Thumbnail-2.png'
   },
   {
     title: 'Mobile Legends',
     category: 'Mobile',
-    img: 'Thumbnail-3',
+    img: '/img/Thumbnail-3.png'
   },
   {
     title: 'Clash of Clans',
     category: 'Mobile',
-    img: 'Thumbnail-4',
+    img: '/img/Thumbnail-4.png'
   },
   {
     title: 'Valorant',
     category: 'Desktop',
-    img: 'Thumbnail-5',
-  },
+    img: '/img/Thumbnail-5.png'
+  }
 ];
 
 export default GameItem;

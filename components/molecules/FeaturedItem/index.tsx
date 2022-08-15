@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-interface Props {
+export interface Props {
   title: string;
   category: string;
   img: string;
@@ -15,7 +15,7 @@ const FeaturedItem = ({ title, category, img }: Props) => (
         <div className="blur-sharp">
           <Image
             className="thumbnail"
-            src={`/img/${img}.png`}
+            src={img}
             width={205}
             height={270}
             alt=""
